@@ -1,6 +1,9 @@
+import { useHistory } from "react-router-dom";
 import NewMeetUpForm from "../components/MeetUps/NewMeetupForm";
 
 const NewMeetUpsPage = () => {
+  const history = useHistory();
+
   const addMeetUpHandler = (meetUpData) => {
     fetch("someURLhere...", {
       method: "POST",
@@ -8,7 +11,13 @@ const NewMeetUpsPage = () => {
       headers: {
         "Content-Type": "applicaiton/json",
       },
-    });
+    })
+      .then(() => {
+        history.replace("/");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
   return (
