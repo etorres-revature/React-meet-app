@@ -8,8 +8,6 @@ const AllMeetUpsPage = () => {
       <MeetUpList meetups={DUMMY_DATA} />
     </section>
   );
-  {
-  }
 };
 
 export default AllMeetUpsPage;
