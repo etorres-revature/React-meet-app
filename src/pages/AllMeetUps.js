@@ -12,7 +12,7 @@ const AllMeetUpsPage = () => {
         return response.json();
       })
       .then((data) => {
-        const meetup = [];
+        const meetups = [];
 
         for (const key in data) {
           const meetup = {
