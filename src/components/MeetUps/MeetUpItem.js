@@ -37,7 +37,9 @@ const MeetUpItem = (props) => {
           <p>{props.description}</p>
         </div>
         <div className={styles.actions}>
-          <button onClick={toggleFavoriteStatusHandler}>To Favorites</button>
+          <button onClick={toggleFavoriteStatusHandler}>
+            {itemIsFavorite ? "Remove Favorite" : "Add Favorite"}
+          </button>
         </div>
       </li>
     </Card>
