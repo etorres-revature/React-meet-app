@@ -1,5 +1,9 @@
 const NewMeetUpsPage = () => {
-  return <div>New Meet Ups Page</div>;
+  return (
+    <section>
+      <h1>Add New Meet Up</h1>
+    </section>
+  );
 };
 
 export default NewMeetUpsPage;
