@@ -1,13 +1,22 @@
+import { useRef } from "react";
 import Card from "../UI/Card";
 import styles from "./NewMeetUpForm.module.css";
 
 const NewMeetUpForm = (props) => {
+  const titleInputRef = useRef();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    const enteredTitle = titleInputRef.current.value;
+  };
+
   return (
     <Card>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={submitHandler}>
         <div className={styles.control}>
           <label htmlFor="title">Meet Up Title</label>
-          <input type="text" required id="title" />
+          <input type="text" required id="title" ref={titleInputRef} />
         </div>
         <div className={styles.control}>
           <label htmlFor="image">Meet Up Image</label>
